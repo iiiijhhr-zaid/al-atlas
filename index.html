@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RN-Majed abu shairah</title>
+    <link rel="stylesheet" href="templatemo-glossy-touch.css">
+    <style>
+        /* Popup Design */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .popup-content {
+            background: white;
+            padding: 20px;
+            width: 300px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+        }
+
+        .popup-content input {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border: 1px solid #888;
+        }
+
+        .popup-content button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 8px;
+            background: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        .popup-content button:nth-child(3) {
+            background: #d9534f;
+        }
+
+        .logo-icon {
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Popup -->
+    <div id="passwordPopup" class="popup">
+        <div class="popup-content">
+            <h3>الرجاء إدخال كلمة المرور (10 خانات)</h3>
+            <input type="password" id="passwordInput" maxlength="10" placeholder="**********">
+            <button onclick="checkPassword()">دخول</button>
+            <button onclick="closePopup()">إلغاء</button>
+        </div>
+    </div>
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <nav class="glass">
+                <div class="logo">
+                    <img src="C:\Users\iiiij\Downloads\templatemo_592_glossy_touch\templatemo_592_glossy_touch\images\logo majed.jfif" alt="Logo" class="logo-icon">
+                    <span>AL-Atlas</span>
+                    <span style="color: rgb(220, 96, 96);">RN-Majed abu shairah</span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HOME PAGE -->
+    <div id="home" class="page active">
+        <div class="container">
+            <div class="content-wrapper">
+
+                <section class="hero glass">
+                    <div class="hero-image">
+                        <img src="C:\Users\iiiij\Downloads\templatemo_592_glossy_touch\templatemo_592_glossy_touch\images\majed page.jfif" alt="">
+                    </div>
+
+                    <div class="hero-content">
+                        <h1>مرحبا بكم في الاطلس الشامل</h1>
+                        <p>يهدف الأطلس إلى مساعدة الطلاب على فهم طبيعة أسئلة الشامل وامتحانات مزاولة المهنة</p>
+                    </div>
+                </section>
+
+                <section class="features">
+
+                    <div class="feature-card glass">
+                        <div class="feature-icon" onclick="openPasswordPopup('page2.html')">📖</div>
+                        <h3>شامل</h3>
+                        <p>نظري – عملي – متوقع أسئلة الشامل مع شرح – اختبارات</p>
+                    </div>
+
+                    <div class="feature-card glass">
+                        <div class="feature-icon" onclick="openPasswordPopup('page1.html')">📖</div>
+                        <h3>زاولة المهنة</h3>
+                        <p>شرح نظري + عملي – أسئلة متوقعة مع الشرح</p>
+                    </div>
+
+                    <div class="feature-card glass">
+                        <div class="feature-icon" onclick="openPasswordPopup('page4.html')">📖</div>
+                        <h3>تنافس</h3>
+                        <p>أسئلة – شروحات – فيديوهات تعليمية</p>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+    </div>
+<script src="templatemo-glossy-touch.js"></script>
+
+
+    <!-- SCRIPT -->
+    <script>
+        let targetLink = "";
+        const correctPassword = "1234567890"; // ضع كلمة المرور هنا
+
+        function openPasswordPopup(link) {
+            targetLink = link;
+            document.getElementById("passwordPopup").style.display = "flex";
+        }
+
+        function closePopup() {
+            document.getElementById("passwordPopup").style.display = "none";
+        }
+
+        function checkPassword() {
+            let entered = document.getElementById("passwordInput").value;
+
+            if (entered.length !== 10) {
+                alert("يجب إدخال 10 خانات");
+                return;
+            }
+
+            if (entered === correctPassword) {
+                window.location.href = targetLink;
+            } else {
+                alert("كلمة المرور غير صحيحة");
+            }
+        }
+    </script>
+
+    <script src="templatemo-glossy-touch.js"></script>
+
+</body>
+     <!-- SINGLE FOOTER -->
+   <div id="footer">
+  <div class="container">
+    <footer class="glass">
+      <div class="footer-content">
+        <div class="footer-links">
+          <!-- فيسبوك -->
+          <a href="https://www.facebook.com/groups/729100441741746/?ref=share&mibextid=NSMWBT" target="_blank" rel="noopener noreferrer">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1200px-Facebook_Logo_%282019%29.png" alt="Facebook Logo" width="100" height="100">
+          </a>
+
+          <!-- الاتصال -->
+          <a href="tel:+962796072245">
+            <img src="https://cdn-icons-png.flaticon.com/512/15/15874.png" alt="Call Icon" width="100" height="100">
+          </a>
+
+          <!-- إنستجرام -->
+          <a href="https://www.instagram.com/majed_abu_shairah?igsh=N2tzcHpmd2hvdDUz" target="_blank" rel="noopener noreferrer">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1200px-Instagram_logo_2016.svg.png" alt="Instagram Logo" width="100" height="100">
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
+</html>
